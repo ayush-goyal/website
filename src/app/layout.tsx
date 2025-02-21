@@ -15,6 +15,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Ayush Goyal",
+  description: "Software engineer",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://ayushgoyal.me"
+  ),
+  authors: [{ name: "Ayush Goyal" }],
+  creator: "Ayush Goyal",
+  publisher: "Ayush Goyal",
   icons: {
     icon: [
       { url: "/favicon.ico" },
