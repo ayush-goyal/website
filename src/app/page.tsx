@@ -71,7 +71,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold mb-4"
         >
-          Ayush Goyal
+          ayush goyal
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -79,15 +79,15 @@ export default function Home() {
           transition={{ delay: 0.2 }}
           className="text-base text-muted-foreground max-w-2xl"
         >
-          I love building new products. Currently based in NYC working @ Google
-          Photos.
+          i love building new products. currently based in nyc working @ google
+          photos.
         </motion.p>
       </motion.section>
 
       {/* Work Experience */}
       <motion.section variants={fadeInUp} className="mb-24">
         <motion.h2 variants={fadeInUp} className="text-xl font-semibold mb-8">
-          Experience
+          experience
         </motion.h2>
         <motion.div
           variants={staggerContainer}
@@ -97,24 +97,24 @@ export default function Home() {
         >
           {[
             {
-              title: "Software Engineer",
-              company: "Google Photos",
-              period: "August 2023 - Present",
+              title: "software engineer",
+              company: "google photos",
+              period: "august 2023 - march 2025",
             },
             {
-              title: "Software Engineering Intern",
-              company: "Google Photos",
-              period: "May 2022 - August 2022",
+              title: "software engineering intern",
+              company: "google photos",
+              period: "may 2022 - august 2022",
             },
             {
-              title: "Software Engineering Intern",
-              company: "Amazon",
-              period: "June 2021 - August 2021",
+              title: "software engineering intern",
+              company: "amazon",
+              period: "june 2021 - august 2021",
             },
             {
-              title: "Vehicle Engineering Mobile App Intern",
-              company: "Tesla",
-              period: "March 2021 - May 2021",
+              title: "vehicle engineering mobile app intern",
+              company: "tesla",
+              period: "march 2021 - may 2021",
             },
           ].map((experience, index) => (
             <motion.div
@@ -140,13 +140,13 @@ export default function Home() {
       {/* Connect */}
       <motion.section variants={fadeInUp}>
         <motion.h2 variants={fadeInUp} className="text-xl font-semibold mb-8">
-          Connect
+          connect
         </motion.h2>
         <motion.p
           variants={fadeInUp}
           className="text-sm text-muted-foreground mb-6"
         >
-          Feel free to contact me at hello@ayushgoyal.me
+          feel free to contact me at hello@ayushgoyal.me
         </motion.p>
         <motion.div
           variants={staggerContainer}
@@ -155,11 +155,11 @@ export default function Home() {
           className="flex gap-4"
         >
           {[
-            { href: "https://github.com/ayush-goyal", text: "Github" },
-            { href: "https://x.com/ayushgoyal121", text: "X" },
+            { href: "https://github.com/ayush-goyal", text: "github" },
+            { href: "https://x.com/ayushgoyal121", text: "x" },
             {
               href: "https://www.linkedin.com/in/1ayushgoyal",
-              text: "LinkedIn",
+              text: "linkedin",
             },
           ].map((link, index) => (
             <motion.div
@@ -185,7 +185,7 @@ export default function Home() {
           className="container flex flex-row items-center justify-between gap-4 pt-3"
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Ayush Goyal
+            © {currentYear} ayush goyal
           </p>
           <ThemeToggle />
         </motion.div>
