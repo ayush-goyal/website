@@ -79,8 +79,7 @@ export default function Home() {
           transition={{ delay: 0.2 }}
           className="text-base text-muted-foreground max-w-2xl"
         >
-          i love building new products. currently based in nyc working @ google
-          photos.
+          i love building new products. currently based in nyc working @ clay.
         </motion.p>
       </motion.section>
 
@@ -96,6 +95,11 @@ export default function Home() {
           className="space-y-8"
         >
           {[
+            {
+              title: "software engineer",
+              company: "clay",
+              period: "march 2025 - present",
+            },
             {
               title: "software engineer",
               company: "google photos",
