@@ -85,7 +85,7 @@ export default function Home() {
       </motion.section>
 
       {/* Work Experience */}
-      <motion.section variants={fadeInUp} className="mb-24">
+      <motion.section variants={fadeInUp} className="mb-20">
         <motion.h2 variants={fadeInUp} className="text-xl font-semibold mb-8">
           experience
         </motion.h2>
@@ -93,7 +93,6 @@ export default function Home() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
         >
           {[
             {
@@ -130,8 +129,9 @@ export default function Home() {
             <motion.div
               key={index}
               variants={fadeInUp}
-              whileHover={{ x: 10 }}
+              whileHover={{ x: 4 }}
               transition={{ duration: 0.2 }}
+              className="py-4"
             >
               <div className="flex justify-between mb-2">
                 <h3 className="text-base font-semibold">{experience.title}</h3>
