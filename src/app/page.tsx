@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { DateTime } from "luxon";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -98,26 +99,31 @@ export default function Home() {
             {
               title: "software engineer",
               company: "clay",
+              companyUrl: "https://clay.com",
               period: "march 2025 - present",
             },
             {
               title: "software engineer",
               company: "google photos",
+              companyUrl: "https://www.google.com/intl/en_us/photos/about",
               period: "august 2023 - march 2025",
             },
             {
               title: "software engineering intern",
               company: "google photos",
+              companyUrl: "https://www.google.com/intl/en_us/photos/about",
               period: "may 2022 - august 2022",
             },
             {
               title: "software engineering intern",
               company: "amazon",
+              companyUrl: "https://amazon.com",
               period: "june 2021 - august 2021",
             },
             {
               title: "vehicle engineering mobile app intern",
               company: "tesla",
+              companyUrl: "https://tesla.com",
               period: "march 2021 - may 2021",
             },
           ].map((experience, index) => (
@@ -133,9 +139,17 @@ export default function Home() {
                   {experience.period}
                 </p>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <motion.a
+                href={experience.companyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 inline-flex items-center"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 {experience.company}
-              </p>
+                <ArrowUpRight className="ml-0.5 h-3 w-3" />
+              </motion.a>
             </motion.div>
           ))}
         </motion.div>
