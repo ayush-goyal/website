@@ -7,6 +7,7 @@ import { DateTime } from "luxon";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -27,6 +28,34 @@ const staggerContainer = {
 const buttonHover = {
   hover: { scale: 1.05, transition: { duration: 0.2 } },
   tap: { scale: 0.95 },
+};
+
+const DotPattern = () => {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: -10,
+        height: "100%",
+        width: "100%",
+        backgroundColor: "var(--background)",
+        backgroundImage: isDark
+          ? `radial-gradient(rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+           linear-gradient(to bottom, rgba(30, 30, 40, 0) 0%, rgba(20, 20, 30, 0.2) 50%, rgba(10, 10, 20, 0.5) 100%)`
+          : `radial-gradient(rgba(0, 0, 0, 0.07) 1.2px, transparent 1.2px),
+           linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1))`,
+        backgroundSize: "22px 22px, 100% 100%",
+        backgroundPosition: "0 0, 0 0",
+      }}
+    />
+  );
 };
 
 export default function Home() {
@@ -62,8 +91,9 @@ export default function Home() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="min-h-screen bg-background px-4 py-24 max-w-screen-md mx-auto"
+      className="min-h-screen px-4 py-24 max-w-screen-md mx-auto"
     >
+      <DotPattern />
       {/* Hero Section */}
       <motion.section variants={fadeInUp} className="mb-24">
         <motion.h1
