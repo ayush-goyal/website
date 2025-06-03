@@ -110,7 +110,7 @@ export default function Home() {
           transition={{ delay: 0.2 }}
           className="text-base text-muted-foreground max-w-2xl"
         >
-          i love building new products. currently based in nyc working @ clay.
+          a product engineer. currently based in nyc working @ clay.
         </motion.p>
       </motion.section>
 
