@@ -46,6 +46,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        { url: "/feed.xml", title: "Ayush Goyal - Blog RSS Feed" },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({
