@@ -42,7 +42,13 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  keywords: ["developer", "software engineer"],
+  keywords: [
+    "developer",
+    "software engineer",
+    "product engineer",
+    "technology",
+    "consumer apps",
+  ],
   robots: {
     index: true,
     follow: true,
