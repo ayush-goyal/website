@@ -1,7 +1,7 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
+import { ThemeProvider } from "../components/theme-provider";
 import { Viewport } from "next";
 import { Metadata } from "next";
+import "@/styles/globals.css";
 
 export const viewport: Viewport = {
   themeColor: [
