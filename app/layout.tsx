@@ -1,6 +1,7 @@
 import { ThemeProvider } from "../components/theme-provider";
 import { Viewport } from "next";
 import { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/styles/globals.css";
 
 export const viewport: Viewport = {
@@ -68,6 +69,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-7C756X49DS" />
     </html>
   );
 }
