@@ -91,7 +91,7 @@ export default function Home() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="min-h-screen px-4 py-24 max-w-screen-md mx-auto"
+      className="min-h-screen px-6 md:px-8 py-24 max-w-screen-md mx-auto"
     >
       <DotPattern />
       {/* Hero Section */}
@@ -110,7 +110,7 @@ export default function Home() {
           transition={{ delay: 0.2 }}
           className="text-base text-muted-foreground max-w-2xl"
         >
-          a product engineer. currently based in nyc working @ clay.
+          product engineer. currently based in nyc working @ clay.
         </motion.p>
       </motion.section>
 
@@ -163,7 +163,7 @@ export default function Home() {
               transition={{ duration: 0.2 }}
               className="py-4"
             >
-              <div className="flex justify-between mb-2">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-1 gap-2">
                 <h3 className="text-base font-semibold">{experience.title}</h3>
                 <p className="text-sm text-muted-foreground">
                   {experience.period}
@@ -172,7 +172,6 @@ export default function Home() {
               <motion.a
                 href={experience.companyUrl}
                 target="_blank"
-                rel="noreferrer"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 inline-flex items-center"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
@@ -187,7 +186,7 @@ export default function Home() {
 
       {/* Connect */}
       <motion.section variants={fadeInUp}>
-        <motion.h2 variants={fadeInUp} className="text-xl font-semibold mb-8">
+        <motion.h2 variants={fadeInUp} className="text-xl font-semibold mb-6">
           connect
         </motion.h2>
         <motion.p
@@ -200,7 +199,7 @@ export default function Home() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="flex gap-4"
+          className="flex flex-wrap gap-3 md:gap-4"
         >
           {[
             { href: "https://github.com/ayush-goyal", text: "github" },
@@ -217,7 +216,7 @@ export default function Home() {
               whileTap="tap"
             >
               <Button variant="outline" asChild>
-                <Link href={link.href} target="_blank" rel="noreferrer">
+                <Link href={link.href} target="_blank">
                   {link.text}
                 </Link>
               </Button>
@@ -230,7 +229,7 @@ export default function Home() {
       <motion.footer variants={fadeInUp} className="mt-24 border-t">
         <motion.div
           variants={fadeInUp}
-          className="container flex flex-row items-center justify-between gap-4 pt-3"
+          className="flex flex-row items-center justify-between gap-3 md:gap-4 pt-3"
         >
           <p className="text-sm text-muted-foreground">
             © {currentYear} ayush goyal
